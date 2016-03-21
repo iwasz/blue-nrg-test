@@ -43,7 +43,7 @@
 extern "C" {
 #endif
 
-#include <stm32f4xx_hal.h>
+#include <stm32f7xx_hal.h>
 // TODO Co to jest
 #define SYSCLK_FREQ 84000000
 

@@ -8,8 +8,9 @@
 #include <sys/stat.h>
 #include <sys/times.h>
 #include <sys/unistd.h>
-#include <stm32f4xx.h>
-#include <stm32f4xx_hal.h>
+#include <stm32f7xx.h>
+#include <stm32f7xx_hal.h>
+#include "usb/debug_usb.h"
 
 #undef errno
 extern int errno;
@@ -234,6 +235,6 @@ int _wait (int *status)
  */
 int _write (int file, char *ptr, int len)
 {
-//        debugLog (PRINTF, PRINTF_T, ptr, len + 1);
+        debugLog (0, MICRO_STRING, ptr, len + 1);
         return len;
 }

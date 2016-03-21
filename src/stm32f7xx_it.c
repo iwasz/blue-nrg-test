@@ -1,4 +1,4 @@
-#include <stm32f4xx_hal.h>
+#include <stm32f7xx_hal.h>
 #include "ble_status.h"
 #include "hci.h"
 #include "stm32_bluenrg_ble.h"
@@ -103,6 +103,8 @@ void SysTick_Handler (void) { HAL_IncTick (); }
 // void EXTI4_IRQHandler (void) {}
 
 void BNRG_SPI_EXTI_IRQHandler (void) { HCI_Isr (); }
+void EXTI0_IRQHandler (void) { HCI_Isr (); }
+
 
 /**
   * @brief  EXTI4_15_IRQHandler This function handles External lines 4 to 15 interrupt request.

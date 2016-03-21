@@ -44,7 +44,7 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include <stm32f4xx_hal.h>
+#include <stm32f7xx_hal.h>
 #include "hal_types.h"
 #include "bluenrg_gatt_server.h"
 #include "bluenrg_gap.h"

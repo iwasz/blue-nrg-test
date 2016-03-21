@@ -1,8 +1,7 @@
 # GCC toolchain prefix
 
-SET(TOOLCHAIN_PREFIX "/home/iwasz/local/share/armcortexm4-unknown-eabihf" CACHE STRING "")
-SET(TARGET_TRIPLET "armcortexm4-unknown-eabihf" CACHE STRING "")
-# As found in : Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+SET(TOOLCHAIN_PREFIX "/home/iwasz/local/share/armcortexm7-unknown-eabi" CACHE STRING "")
+SET(TARGET_TRIPLET "arm-unknown-eabi" CACHE STRING "")
 SET(DEVICE "" CACHE STRING "")
 SET(CUBE_ROOT "" CACHE STRING "")
 SET(STARTUP_CODE "" CACHE STRING "")
@@ -32,8 +31,8 @@ SET(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
 INCLUDE_DIRECTORIES(${SUPPORT_FILES})
 LINK_DIRECTORIES(${SUPPORT_FILES})
 ADD_DEFINITIONS(-D${DEVICE})
-INCLUDE_DIRECTORIES("${CUBE_ROOT}/Drivers/STM32F4xx_HAL_Driver/Inc/")
-INCLUDE_DIRECTORIES("${CUBE_ROOT}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/")
+INCLUDE_DIRECTORIES("${CUBE_ROOT}/Drivers/STM32F7xx_HAL_Driver/Inc/")
+INCLUDE_DIRECTORIES("${CUBE_ROOT}/Drivers/CMSIS/Device/ST/STM32F7xx/Include/")
 INCLUDE_DIRECTORIES("${CUBE_ROOT}/Drivers/CMSIS/Include/")
 # For endian.h
 #INCLUDE_DIRECTORIES ("${TOOLCHAIN_PREFIX}/${TARGET_TRIPLET}/include/machine")
