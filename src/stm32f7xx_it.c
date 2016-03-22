@@ -102,9 +102,8 @@ void SysTick_Handler (void) { HAL_IncTick (); }
 // TODO przenieść do osobnego pliku.
 // void EXTI4_IRQHandler (void) {}
 
+// EXTI0_IRQHandler
 void BNRG_SPI_EXTI_IRQHandler (void) { HCI_Isr (); }
-void EXTI0_IRQHandler (void) { HCI_Isr (); }
-
 
 /**
   * @brief  EXTI4_15_IRQHandler This function handles External lines 4 to 15 interrupt request.

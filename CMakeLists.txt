@@ -15,8 +15,6 @@ INCLUDE_DIRECTORIES("src/")
 # | BlueNRG library |
 # +-----------------+
 SET (BLUE_NRG_ROOT "/home/iwasz/workspace/STM32CubeExpansion_BLE1_V2.5.2/Middlewares/ST/")
-#??? To jest do tego timerServer.
-ADD_DEFINITIONS ("-DUSE_STM32F4XX_NUCLEO")
 ADD_DEFINITIONS ("-DNVIC_RTC_WAKEUP_HANDLER_ID=RTC_WKUP_IRQn")
 INCLUDE_DIRECTORIES("${BLUE_NRG_ROOT}/STM32_BlueNRG/SimpleBlueNRG_HCI/includes")
 #LIST (APPEND APP_SOURCES "${BLUE_NRG_ROOT}/STM32_BlueNRG/SimpleBlueNRG_HCI/hci/hci_dma_lp.c")
@@ -238,6 +236,8 @@ LIST (APPEND APP_SOURCES "../gpa-common/usb/Usb.cc")
 LIST (APPEND APP_SOURCES "../gpa-common/usb/Debug.h")
 LIST (APPEND APP_SOURCES "../gpa-common/usb/Debug.cc")
 LIST (APPEND APP_SOURCES "../gpa-common/usb/debug_usb.h")
+LIST (APPEND APP_SOURCES "../gpa-common/errorHandler.c")
+LIST (APPEND APP_SOURCES "../gpa-common/errorHandler.h")
 LIST (APPEND APP_SOURCES "${USB_LIB}/Core/Src/usbd_core.c")
 LIST (APPEND APP_SOURCES "${USB_LIB}/Core/Src/usbd_ctlreq.c")
 LIST (APPEND APP_SOURCES "${USB_LIB}/Core/Src/usbd_ioreq.c")
@@ -249,11 +249,6 @@ LIST (APPEND APP_SOURCES "${USB_LIB}/Core/Inc/usbd_def.h")
 # +--------------+
 # | User code    |
 # +--------------+
-LIST (APPEND APP_SOURCES "src/bluenrg_interface.h")
-LIST (APPEND APP_SOURCES "src/config.h")
-LIST (APPEND APP_SOURCES "src/connection_config.h")
-LIST (APPEND APP_SOURCES "src/errorHandler.c")
-LIST (APPEND APP_SOURCES "src/errorHandler.h")
 LIST (APPEND APP_SOURCES "src/main.cc")
 LIST (APPEND APP_SOURCES "src/sensor_service.c")
 LIST (APPEND APP_SOURCES "src/sensor_service.h")

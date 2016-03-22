@@ -7,7 +7,6 @@
  ****************************************************************************/
 
 #include <stm32f7xx_hal.h>
-#include "config.h"
 #include "errorHandler.h"
 extern "C" {
 #include "osal.h"
@@ -42,7 +41,7 @@ static void MPU_Config (void);
 
 int main (void)
 {
-        const char *name = "BlueNRG";
+        const char *name = "iwasz";
         uint8_t SERVER_BDADDR[] = { 0x12, 0x34, 0x00, 0xE1, 0x80, 0x03 };
         uint8_t bdaddr[BDADDR_SIZE];
         uint16_t service_handle, dev_name_char_handle, appearance_char_handle;
