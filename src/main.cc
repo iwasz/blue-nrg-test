@@ -41,7 +41,7 @@ static void MPU_Config (void);
 
 int main (void)
 {
-        const char *name = "iwasz";
+        const char *name = "ZlaSuka";
         uint8_t SERVER_BDADDR[] = { 0x12, 0x34, 0x00, 0xE1, 0x80, 0x03 };
         uint8_t bdaddr[BDADDR_SIZE];
         uint16_t service_handle, dev_name_char_handle, appearance_char_handle;
@@ -67,9 +67,9 @@ int main (void)
         systemClockConfig ();
 
         IoBuffer usbBuffer (1024);
-//        Usb usb (&usbBuffer);
+        Usb usb (&usbBuffer);
         Debug debug (&usbBuffer);
-//        usb.init ();
+        usb.init ();
         debug.log (1, MICRO_STRING, "µC Initialized");
         HAL_Delay (100);
 
